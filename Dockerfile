@@ -29,4 +29,4 @@ ENV HUB_DATA_PATH /data/upsource
 
 # Looks like ENV variables don't get subbed in the CMD command hence the hardcode of values
 # from https://confluence.jetbrains.com/display/YTD6/YouTrack+JAR+as+a+Service+on+Linux
-CMD ["/opt/Upsource/bin/upsource.sh", "start", "--listen-port", "8120"]
+CMD ["/opt/Upsource/bin/upsource.sh", "run", "--listen-port", "8120"]
