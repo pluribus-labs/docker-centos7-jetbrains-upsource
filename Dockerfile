@@ -21,7 +21,7 @@ ENV HUB_DOWNLOAD http://download-cf.jetbrains.com/upsource
 RUN wget -nv $HUB_DOWNLOAD/$HUB_PACKAGE
 RUN unzip $HUB_PACKAGE -d /opt/upsource &&\
    rm $HUB_PACKAGE
-EXPOSE 8110 8080
+EXPOSE 8120 8080
 
 VOLUME  ["/data/upsource"]
 ENV HUB_DATA_PATH /data/upsource
