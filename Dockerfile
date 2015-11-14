@@ -19,7 +19,7 @@ ENV HUB_PACKAGE upsource-2.0.3682.zip
 ENV HUB_DOWNLOAD http://download-cf.jetbrains.com/upsource
 
 RUN wget -nv $HUB_DOWNLOAD/$HUB_PACKAGE
-RUN unzip $HUB_PACKAGE -d /opt/Upsource &&\
+RUN unzip $HUB_PACKAGE -d /opt &&\
    rm $HUB_PACKAGE
 EXPOSE 8120 8080
 
