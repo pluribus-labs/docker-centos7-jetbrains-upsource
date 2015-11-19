@@ -1,4 +1,4 @@
-# docker run -dt -p 8120:8120 pluribuslabs/centos7-jetbrains-upsource
+# docker run -dt -p 80:8080 -v /home/upsource:/data/upsource --restart=always --name=upsource-2.5  pluribuslabs/centos7-jetbrains-upsource:2.5
 
 FROM pluribuslabs/centos7-oracle-jdks-7-8
 
@@ -16,7 +16,7 @@ RUN echo '* - nofile 100000' >> /etc/security/limits.conf
 RUN echo '* - nproc 32768' >> /etc/security/limits.conf
 RUN echo '* - as unlimited' >> /etc/security/limits.conf
 
-ENV HUB_PACKAGE upsource-2.0.3682.zip
+ENV HUB_PACKAGE upsource-2.5.4934.zip
 ENV HUB_DOWNLOAD http://download-cf.jetbrains.com/upsource
 
 RUN wget -nv $HUB_DOWNLOAD/$HUB_PACKAGE
