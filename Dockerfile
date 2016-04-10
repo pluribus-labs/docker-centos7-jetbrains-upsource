@@ -16,7 +16,7 @@ RUN echo '* - nofile 100000' >> /etc/security/limits.conf
 RUN echo '* - nproc 32768' >> /etc/security/limits.conf
 RUN echo '* - as unlimited' >> /etc/security/limits.conf
 
-ENV HUB_PACKAGE upsource-2.5.5074.zip
+ENV HUB_PACKAGE upsource-3.0.4237.zip
 ENV HUB_DOWNLOAD https://download.jetbrains.com/upsource
 
 RUN wget -nv $HUB_DOWNLOAD/$HUB_PACKAGE
