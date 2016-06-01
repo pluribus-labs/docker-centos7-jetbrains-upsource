@@ -3,8 +3,8 @@
 FROM pluribuslabs/centos7-oracle-jdks-7-8
 
 MAINTAINER Pluribus Labs Docker Dev <docker-dev@pluribuslabs.com>
-
-ENV HUB_PACKAGE upsource-3.0.4346.zip
+ENV HUB_PACKAGE_BASE_NAME upsource-3.0.4346
+ENV HUB_PACKAGE $HUB_PACKAGE_BASE_NAME.zip
 ENV HUB_DOWNLOAD https://download.jetbrains.com/upsource
 ENV HUB_DATA_PATH /data/upsource
 ENV HUB_CONF_PATH /opt/Upsource/conf
@@ -16,8 +16,8 @@ RUN yum -y install wget hostname unzip net-tools && \
     echo '* - nproc 32768' >> /etc/security/limits.conf && \
     echo '* - as unlimited' >> /etc/security/limits.conf && \
     wget -nv $HUB_DOWNLOAD/$HUB_PACKAGE && \
-    mkdir /opt/Upsource && \
-    unzip $HUB_PACKAGE -d /opt/Upsource && \
+    unzip $HUB_PACKAGE -d /opt && \
+    mv /opt/$HUB_PACKAGE_BASE_NAME /opt/Upsource && \
     rm $HUB_PACKAGE
 
 EXPOSE 8080
