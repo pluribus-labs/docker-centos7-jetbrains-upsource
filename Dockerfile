@@ -4,7 +4,7 @@ FROM pluribuslabs/centos7-oracle-jdks-7-8
 
 MAINTAINER Pluribus Labs Docker Dev <docker-dev@pluribuslabs.com>
 
-ENV HUB_PACKAGE upsource-3.0.4237.zip
+ENV HUB_PACKAGE upsource-3.0.4346.zip
 ENV HUB_DOWNLOAD https://download.jetbrains.com/upsource
 ENV HUB_DATA_PATH /data/upsource
 ENV HUB_CONF_PATH /opt/Upsource/conf
