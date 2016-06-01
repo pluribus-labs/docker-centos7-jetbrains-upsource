@@ -16,7 +16,8 @@ RUN yum -y install wget hostname unzip net-tools && \
     echo '* - nproc 32768' >> /etc/security/limits.conf && \
     echo '* - as unlimited' >> /etc/security/limits.conf && \
     wget -nv $HUB_DOWNLOAD/$HUB_PACKAGE && \
-    unzip $HUB_PACKAGE -d /opt && \
+    mkdir /opt/Upsource && \
+    unzip $HUB_PACKAGE -d /opt/Upsource && \
     rm $HUB_PACKAGE
 
 EXPOSE 8080
